@@ -39,23 +39,8 @@ The maximum possible groupings of adjacent ones are already shown in the figure.
 
 **PROGRAM**
 
-module jkflipflop (
-    input J, K, clk, reset,
-    output reg Q
-);
-    always @(posedge clk or posedge reset) begin
-        if (reset)
-            Q <= 0;              // Reset the flip-flop
-        else begin
-            case ({J,K})
-                2'b00: Q <= Q;   // No change
-                2'b01: Q <= 0;   // Reset
-                2'b10: Q <= 1;   // Set
-                2'b11: Q <= ~Q;  // Toggle
-            endcase
-        end
-    end
-endmodule
+<img width="514" height="426" alt="image" src="https://github.com/user-attachments/assets/da371a55-cfb2-48c0-8454-58e2ddec3ab4" />
+
 
 /* Program for flipflops and verify its truth table in quartus using Verilog programming.
 Developed by:s.vishvabala
